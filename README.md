@@ -19,7 +19,7 @@ const regexp1 = new RegExp('표현, '옵션');
 const regexp1 = new RegExp('[a-z]', 'gi'); 
 ```
 
-## 리터럴 방식
+### 리터럴 방식
 ```js 
 /표현/옵션
 /[a-z]]/gi;
