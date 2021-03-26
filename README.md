@@ -70,3 +70,5 @@ ab? | b가 없거나 b와 일치
 \b | 62개 문자에 일치하지 않는 문자 경계 (Boundary)
 \d | 숫자에 일치 (Digit)
 \s | 공백에 일치 (Space, Tab)
+(?=0) | 앞쪽 일치 (Lookahead)
+(?<=) | 뒷쪽 일치 (Lookbehind)
