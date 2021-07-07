@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 3242
+    function solution(n) {
+      let m = n.toString().split('')
+      let sum = 0;
+      for (var i of m) {
+        sum += parseInt(i, 10)
+      }
+      return sum
+    }
+    console.log(solution(a))
+  </script>
+</body>
+</html>

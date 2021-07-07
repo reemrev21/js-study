@@ -1,0 +1,60 @@
+<script>
+    let 대기인원 = 14000605
+    console.log(`걸린일수 : ${대기인원/1200}`); // 걸린일수
+
+    // 일년일수를 구하고
+    // 걸린년도를 구한다. 
+    let 일년일수 = 0;
+    for (var i = 1; i < 11; i++) {
+      일년일수 += 2**i
+    }
+
+    console.log(`걸린년도 : ${(대기인원/1200)/일년일수}`); // 걸린년도
+
+    let 걸린월수 = 0;
+    
+    // 나머지로 걸린년린도에 남은 일 수 구하기
+    let 나머지일수 = (대기인원/1200)%일년일수 
+    console.log(`걸린년도를 뺀 나머지 일수(계산 전) : ${나머지일수}`); // 걸린년도를 뺀 나머지 일수
+
+    for(var i = 10; i > 0; i--) {
+      걸린월수++;
+      // 나머지 일수가 한 달 보다 작으면 종료하고
+      // 크면 나머지일수 - 2**i
+      if(나머지일수 < 2**i) {
+        break
+      }
+        나머지일수 = 나머지일수 - 2**i
+    }
+
+    console.log(`걸린년도와 걸린월수를 뺀 나머지 일수(계산 후) : ${나머지일수}`); // 걸린년도를 뺀 나머지 일수
+
+    // 해당월에 포함된거니까 1 빼줘야함
+    console.log(`걸린월수 : ${걸린월수-1}`); // 걸린월수
+    
+    // +9는 9시가 탑승시간 이기 때무닝다. 
+    console.log(`시간 : ${(대기인원%1200)/100 + 9}`); // 시간
+    
+    let 출발분 = [25, 40, 55, 70, 85, 100];
+    let 최종계산된분 = 0; 
+
+    for (let variable in 출발분) {
+      if(출발분[variable] > (대기인원%1200)%100) {
+        최종계산된분 = variable * 10
+        break
+      }
+    }
+    
+    let date = new Date();
+    console.log(date.getFullYear());
+    console.log(date.getDay());
+    console.log(date.getHours());
+    console.log(date.getMinutes());
+    console.log(date.getSeconds());
+
+    if(최종계산된분 + date.getMinutes() > 60) {
+      최종계산된분 += date.getMinutes() - 60
+      // 시간에도 +1 
+    }
+    console.log(`최종계산된분 : ${ 최종계산된분 + date.getMinutes() }`); // 최종계산된분
+</script>    

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let s = ''
+    for (let i = 0; i <= 1000; i++) {
+      s += i
+    }
+
+    console.log(s)
+    
+    let count = 0;
+    for (let k of s) {
+     
+      if (k == 1) {
+        count++;
+      }   
+    }
+
+      console.log(count)
+    
+    let count_ = 0;
+    for (let k in s) {
+     
+      if (s[k] == 1) {
+        count_++;
+      }   
+    }
+
+      console.log(count_)
+
+    console.log(s.match(/1/g).length)
+
+    // 소인수 분해 방식 
+    const obj = {}
+    for (let i = 0; i<=1000; i++) {
+      let temp = i ;
+      while(temp > 0) {
+        let num = temp%10;
+        if (obj[num]){
+          obj[num]++;
+        }
+        else {
+          obj[num] = 1;
+        }
+        temp = parseInt(temp/10, 10)
+      }
+    }
+
+
+    console.log(obj[1])
+
+
+
+
+  </script>
+</body>
+</html>

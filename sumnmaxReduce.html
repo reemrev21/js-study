@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = [11, 14, 34, 33, 12, 43, 4, 5, 2]
+    // const reducerOne = (ac, currentValue) => ac + currentValue
+    // const reducerTwo = (ac, currentValue) => ac - currentValue
+    const reducerThree = (ac, currentValue) => ac > currentValue ? ac : currentValue ;
+    const reducerFour = (ac, currentValue) => ac < currentValue ? ac : currentValue
+
+
+
+    // console.log(a.reduce(reducerOne))
+    // console.log(a.reduce(reducerTwo))
+    console.log(a.reduce(reducerThree))
+    console.log(a.reduce(reducerFour))
+
+
+
+  </script>
+</body>
+</html>

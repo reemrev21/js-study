@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let inputNum = prompt('검사할 숫자를 입력하세요 : ')
+    let count = 0;
+
+    for (var i = 2; i <= inputNum; i++) {
+      let sosu = true;
+      for (var j = 2; j < i; j++) {
+        if (i % j === 0) {
+          sosu = false;
+        }
+      }
+      if (sosu) {
+        ++count;
+      }
+    }
+
+    console.log(`Result: ${count}개`)
+  </script>
+</body>
+</html>

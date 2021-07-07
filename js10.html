@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let getNum = prompt('Enter you number: ');
+    let tree = ' ';
+    function MadeTree(n) {
+      for(let i=1; i<=n; i++){
+        let star = '';
+        for(let j=1; j<=n-i; j++){
+          star += ' ';
+        }
+        for(let k=1; k<=2*i-1; k++){
+          star += '*';
+        }
+        tree += star + '\n';
+      }
+      return tree;
+    }
+
+    console.log(MadeTree(getNum))
+
+
+  </script>
+</body>
+</html>

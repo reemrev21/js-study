@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     function reverseString(text) {
+       if(text.length == 1) {
+         return text
+       } 
+       console.log(text.slice(0, text.length-1))
+       return text[text.length-1] + reverseString(text.slice(0, text.length-1))
+     }
+     
+     console.log(reverseString('leehojun'))
+
+    //  let a = 'leehojun'
+    //  console.log(a.split('').reverse().join(''))
+  </script>
+</body>
+</html>

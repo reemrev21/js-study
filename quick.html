@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 분할과 정복 
+    let inputValue = [11, 14, 34, 33, 12, 43, 4, 5, 2]
+    let result = []
+
+    function quickSort(inputArray) {
+      let inputValuelength = inputArray.length
+      if (inputValuelength <= 1) {
+        return inputArray
+      }
+      let pibot = [inputArray.shift()]
+      let oneGroup = []
+      let twoGroup = []
+
+      for (var i in inputArray) {
+        if(inputArray[i] < pibot) {
+          oneGroup.push(inputArray[i])
+        }
+        else {
+          twoGroup.push(inputArray[i])
+        }
+      }
+
+ console.log (`그룹하나 : ${oneGroup}\n 그룹둘 : ${twoGroup}\n  피봇: ${pibot}`)
+
+        return quickSort(oneGroup).concat(pibot, quickSort(twoGroup))
+     }
+
+    console.log(quickSort(inputValue))
+
+  </script>
+</body>
+</html>

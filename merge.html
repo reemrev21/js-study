@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 분할과 정복 
+    let inputValue = [11, 14, 34, 33, 12, 43, 4, 5, 2]
+    let result = []
+
+    function mergeSort(inputArray) {
+      let inputValuelength = inputArray.legth
+      if (inputValuelength <= 1) {
+        return inputArray
+      }
+      let middleValue = parseInt(inputValuelength/2)
+      let oneGroup = mergeSort(inputArray.slice(0, middleValue));
+      let twoGroup = mergeSort(inputArray.slice(middleValue, ));
+      return `그룹하나 : ${oneGroup} 그룹둘 : ${twoGroup}\n `
+
+    }
+
+    console.log(mergeSort(inputValue))
+
+  </script>
+</body>
+</html>

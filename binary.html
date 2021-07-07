@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     function binary(num) {
+       if(num == 1 || num == 0) {
+         return String(num)
+       } 
+
+       return binary(Math.floor(num / 2)) + String(num % 2) 
+     }
+     
+     console.log(binary(11))
+
+    //  let a = 'leehojun'
+    //  console.log(a.split('').reverse().join(''))
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 쉬운 풀이
+      let planet = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성']
+      let input_ = prompt('입력 : ')
+      // 4번째 행성이면 배열 기준 -1 번째니까,, ^^ ㅋㅋ
+      console.log(`출력 : ${planet[input_-1]}`)
+    
+    // 내가 한거
+      let planetsMap = new Map()
+      planetsMap.set(1, '수성')
+      planetsMap.set(2, '금성')
+      planetsMap.set(3, '지구')
+      planetsMap.set(4, '화성')
+      planetsMap.set(5, '목성')
+      planetsMap.set(6, '토성')
+      planetsMap.set(7, '천왕성')
+      planetsMap.set(8, '해왕성')
+
+      console.log(planetsMap)
+
+      let input = prompt('입력 : ')
+
+      function findPlanet(num) {
+        for(let key of planetsMap.keys())
+          if (key == num) {
+          return planetsMap.get(key) // num 아니고 key..
+          }
+      }
+
+      console.log(`출력 : ${findPlanet(input)}`)
+  </script>
+</body>
+</html>

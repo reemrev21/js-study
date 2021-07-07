@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let inputValue = [11, 14, 34, 33, 12, 43, 4, 5, 2]
+    let result = []
+    let aLength = inputValue.length // 하나씩 빠지면서 줄어드니까 변수로 따로 선언함
+
+    function insertIndex(result, insertValue) {
+      for (var i in result) {
+        if (insertValue < result[i]) {
+          return i
+        }
+      }
+
+      return result.length
+    }
+
+    for (var i = 0; i < aLength; i++) {
+      insertValue = inputValue.shift() // 앞에서 부터 꺼내니까 
+      index = insertIndex(result, insertValue)
+      result.splice(index, 0, insertValue)   // splice (start_index, deleteCount, 'item' )
+
+      console.log(`인덱스 : ${index}`)
+      console.log(`결과 : ${result}`)
+    }
+
+  </script>
+</body>
+</html>
